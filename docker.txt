@@ -1,0 +1,34 @@
+## Unix docker commands, some may relate to windows
+# View downloaded images
+docker images
+
+# View active containers
+docker ps
+
+# Remove all containers not running
+docker rm $(docker ps -q -f status=exited)
+
+# Start docker service -- neccessary to do anything
+sudo service docker start
+
+# Build
+Assuming you are in this directory:
+`docker build --no-cache . -t markdownhere:0.1 -t markdownhere:latest`
+
+# Run
+You can then run it by:
+`docker run markdownhere`
+
+# Bash into an image
+You can enter a new bash terminal in the container using:
+`docker exec -i -t <CONTAINER-NAME> /bin/bash`
+
+
+### Inspecting status of the docker image and network setup
+`docker inspect <CONTAINER-NAME>`
+`docker network ls`
+`docker network inspect bridge`
+
+### Example startup command
+# Run Docker, expose the port 9000, delete container image on exit.
+`docker run -p 9000:9000 -rm markdownhere` 

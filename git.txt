@@ -1,0 +1,6 @@
+# Show me what changed
+# -C = detect renames, -M40 = consider a delete/add pair to be a rename if no more than 40% of file changed
+git diff -C -M40 <commit-hash>
+
+# Create git tag with a message
+git tag -a 1.1 -m "Release version 1.1 with changes to UI"

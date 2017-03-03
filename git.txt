@@ -4,3 +4,10 @@ git diff -C -M40 <commit-hash>
 
 # Create git tag with a message
 git tag -a 1.1 -m "Release version 1.1 with changes to UI"
+
+
+# List all tags, with at most x lines of output (if annotated tag).
+git tag -nx
+
+# Eg, show all tags with at most 2 lines from tag message:
+git tag -n2

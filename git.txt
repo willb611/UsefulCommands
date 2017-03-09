@@ -11,3 +11,7 @@ git tag -nx
 
 # Eg, show all tags with at most 2 lines from tag message:
 git tag -n2
+
+
+# Git diff output linewrap
+If using less as pager (the default?) type -S while viewing the diff to reenable line wrapping

@@ -32,3 +32,6 @@ You can enter a new bash terminal in the container using:
 ### Example startup command
 # Run Docker, expose the port 9000, delete container image on exit.
 `docker run -p 9000:9000 -rm markdownhere` 
+
+### Remove intermediate containers
+docker rmi $(docker images -f "dangling=true" -q)

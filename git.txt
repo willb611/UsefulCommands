@@ -16,5 +16,5 @@ git tag -n2
 # Git diff output linewrap
 If using less as pager (the default?) type -S while viewing the diff to reenable line wrapping
 
-# Show tracked files
-git ls-tree -r master --name-only
+# Show tracked files on whatever HEAD is pointing at
+git ls-tree -r HEAD --name-only

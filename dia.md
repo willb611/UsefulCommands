@@ -1,0 +1,2 @@
+# Eps files can be made with following command (substituted names)
+`dia -t eps -e MyDiagram.eps MyDiagram.dia`

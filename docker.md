@@ -1,15 +1,15 @@
 ## Unix docker commands, some may relate to windows
 # View downloaded images
-docker images
+`docker images`
 
 # View active containers
-docker ps
+`docker ps`
 
 # Remove all containers not running
-docker rm $(docker ps -q -f status=exited)
+`docker rm $(docker ps -q -f status=exited)`
 
 # Start docker service -- neccessary to do anything
-sudo service docker start
+`sudo service docker start`
 
 # Build
 Assuming you are in this directory:
@@ -34,4 +34,4 @@ You can enter a new bash terminal in the container using:
 `docker run -p 9000:9000 -rm markdownhere` 
 
 ### Remove intermediate containers
-docker rmi $(docker images -f "dangling=true" -q)
+`docker rmi $(docker images -f "dangling=true" -q)`

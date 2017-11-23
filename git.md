@@ -18,3 +18,11 @@ If using less as pager (the default?) type -S while viewing the diff to reenable
 
 # Show tracked files on whatever HEAD is pointing at
 `git ls-tree -r HEAD --name-only`
+
+# Submodules!
+From [stackoverflow](https://stackoverflow.com/questions/1535524/git-submodule-inside-of-a-submodule-nested-submodules).
+## Clone module which has submodules (possibly recursive)
+`git clone --recursive`
+
+## Update submodules
+`git submodule update --recursive`

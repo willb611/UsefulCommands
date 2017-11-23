@@ -1,37 +1,39 @@
-## Unix docker commands, some may relate to windows
+## Docker commands
+# Start docker service (Ubuntu only?)
+`sudo service docker start`
+
+## Docker images
 # View downloaded images
 `docker images`
 
-# View active containers
+# Remove intermediate images built during a build
+`docker rmi $(docker images -f "dangling=true" -q)`
+
+## Containers
+# View running containers
 `docker ps`
 
 # Remove all containers not running
 `docker rm $(docker ps -q -f status=exited)`
 
-# Start docker service -- neccessary to do anything
-`sudo service docker start`
 
 # Build
-Assuming you are in this directory:
-`docker build --no-cache . -t markdownhere:0.1 -t markdownhere:latest`
+Assuming you are in the same directory as the project with 'Dockerfile':
+`docker build --no-cache --rm . -t <<docker-image-name>>:0.1 -t <<docker-image-name>>:latest`
 
 # Run
 You can then run it by:
-`docker run markdownhere`
+`docker run --rm docker-image-name`
 
-# Bash into an image
-You can enter a new bash terminal in the container using:
-`docker exec -i -t <CONTAINER-NAME> /bin/bash`
-
-
-### Inspecting status of the docker image and network setup
+# Inspecting status of the docker image and network setup
 `docker inspect <CONTAINER-NAME>`
 `docker network ls`
 `docker network inspect bridge`
 
-### Example startup command
-# Run Docker, expose the port 9000, delete container image on exit.
-`docker run -p 9000:9000 -rm markdownhere` 
+# Commands for a running container
+## Start bash shell in running container
+You can enter a new bash terminal in the container using:
+`docker exec -i -t <CONTAINER-NAME> /bin/bash`
 
-### Remove intermediate containers
-`docker rmi $(docker images -f "dangling=true" -q)`
+## Copy file from docker container
+

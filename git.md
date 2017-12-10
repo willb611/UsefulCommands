@@ -24,5 +24,8 @@ From [stackoverflow](https://stackoverflow.com/questions/1535524/git-submodule-i
 ## Clone module which has submodules (possibly recursive)
 `git clone --recursive`
 
-## Update submodules
+## Ensure child submodules, using the commit specified by the parent module
 `git submodule update --recursive`
+
+## Ensure latest version of all child submodules
+`git submodule update --remote`

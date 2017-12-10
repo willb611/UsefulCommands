@@ -20,7 +20,10 @@ If using less as pager (the default?) type -S while viewing the diff to reenable
 `git ls-tree -r HEAD --name-only`
 
 # Submodules!
-From [stackoverflow](https://stackoverflow.com/questions/1535524/git-submodule-inside-of-a-submodule-nested-submodules).
+Basically submodules let you have nested git repositories. Mainly useful if you want to keep a snapshot of another repository to read from. Not the best use case if you expect to be writing to the submodules a lot.
+
+`man git-submodule`
+
 ## Clone module which has submodules (possibly recursive)
 `git clone --recursive`
 

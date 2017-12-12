@@ -3,3 +3,6 @@
 
 # Recursive wc 
 `find <PATH> -type f | xargs wc -l`
+
+# Recursive diff summary (i.e. names of files which differ ignoring whitespace)
+`diff -rqw`

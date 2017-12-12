@@ -29,6 +29,10 @@ Basically submodules let you have nested git repositories. Mainly useful if you 
 
 ## Ensure child submodules, using the commit specified by the parent module
 `git submodule update --recursive`
+Note that this won't force download of child repositories, to do use instead:
+`git submodule update --init --recursive`
 
 ## Ensure latest version of all child submodules
 `git submodule update --remote`
+Note that this won't force download of child repositories, to do use instead:
+`git submodule update --init --recursive`
